@@ -1,11 +1,14 @@
-import Header from "./components/Header";
-import Feature from "./components/Feature";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from "./pages/About";
+import Confirmation from "./pages/Confirmation";
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Feature />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<About />} />
+      <Route path="/Confirmation" element={<Confirmation />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
